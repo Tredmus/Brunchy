@@ -2,17 +2,18 @@
     display: inline-block;
     text-align: center;
     position: relative;
-    padding: 1rem 1rem;
-    width: 100%;
-    min-width: 6rem;
-    max-width: 13rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 0.938rem;
+    background-color: $c-main;
     color: $c-white;
     cursor: pointer;
     transition: background-color $t-duration;
-    background-color: $c-black;
+    
   
     &:hover {
-      background-color: $c-white;
+      background-color: $c-main-light;
+      color: $c-main;
     }
   
     &:active {

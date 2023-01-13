@@ -1,0 +1,28 @@
+@import '../../styles/main.scss';
+
+.orderWrapper {
+    display: flex;
+    justify-content: center;
+    justify-self: end;
+    margin: auto 0 .75rem;
+}
+
+.order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 29.75rem;
+    padding: 0.875rem 2.563rem 0.875rem 1.75rem;
+    border-radius: 0.938rem;
+    background-color: $c-white-dark;
+
+    img {
+        margin-right: 4.5rem;
+    }
+}
+
+.totalPrice {
+    display: flex;
+    align-items: center;
+}

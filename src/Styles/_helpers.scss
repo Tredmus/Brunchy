@@ -2,7 +2,8 @@
     display: inline-block;
     text-align: center;
     position: relative;
-    padding: 1rem 1.5rem;
+    min-width: 9.625rem;
+    padding: .75rem 1.5rem;
     font-size: 1.25rem;
     border-radius: 0.938rem;
     background-color: $c-main;

@@ -1,0 +1,39 @@
+@import '../../styles/main.scss';
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(2px);
+  z-index: 19;
+}
+
+.modal {
+  @include flexCenter;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5.375rem 8.125rem;
+  border-radius: 0.938rem;
+  background-color: $c-white-dark;
+  z-index: 20;
+
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: .75rem;
+    color: $c-main;
+    text-transform: none;
+  }
+
+  p {
+    font-size: 1.125rem;
+    color: $c-grey;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+  }
+}

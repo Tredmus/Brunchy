@@ -1,7 +1,12 @@
 import classes from "./Main.module.scss";
 import { Products } from "../Products/Products";
+import { ProductType } from "../Product/Product";
 
-export const Main = () => {
+type Props = {
+  onAddToCart: (product: ProductType) => void;
+};
+
+export const Main = ({ onAddToCart }: Props) => {
   return (
     <main className={classes.main}>
       <div className={classes.headingBox}>
@@ -14,7 +19,7 @@ export const Main = () => {
           about you ?
         </p>
       </div>
-      <Products />
+      <Products onAddToCart={onAddToCart} />
     </main>
   );
 };

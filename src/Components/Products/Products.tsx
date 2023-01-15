@@ -1,46 +1,32 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
 import classes from "./Products.module.scss";
-import { Product } from "../Product/Product";
+import { Product, ProductType } from "../Product/Product";
 import products from "../../Data/products.json";
+import { useHorizontalScroll } from "../../Functions/HorizontalScroll";
 
-export const Products = () => {
+type Props = {
+  onAddToCart: (product: ProductType) => void;
+};
+
+export const Products = ({ onAddToCart }: Props) => {
   const ref =
     useRef<HTMLDivElement>() as unknown as React.MutableRefObject<HTMLUListElement>;
   const { events } = useDraggable(ref);
-
-  function useHorizontalScroll() {
-    const elRef: any = useRef();
-    useEffect(() => {
-      const el = ref.current;
-      if (el) {
-        const onWheel = (e: any) => {
-          if (e.deltaY == 0) return;
-          e.preventDefault();
-          el.scrollTo({
-            left: el.scrollLeft + e.deltaY,
-            // behavior: "smooth",
-          });
-        };
-        el.addEventListener("wheel", onWheel);
-        return () => el.removeEventListener("wheel", onWheel);
-      }
-    }, []);
-    return ref;
-  }
-
-  const scrollRef = useHorizontalScroll();
+  const scrollRef = useHorizontalScroll(ref);
 
   return (
     <ul className={classes.products} {...events} ref={scrollRef}>
       {products.map((product: any) => {
         return (
-          <Product
-            name={product.name}
-            caption={product.caption}
-            image={product.image}
-            price={product.price}
-          />
+          // <Product
+          //   name={product.name}
+          //   caption={product.caption}
+          //   image={product.image}
+          //   price={product.price}
+          //   onAddToCart={onAddToCart}
+          // />
+          <Product product={product} onAddToCart={onAddToCart} />
         );
       })}
     </ul>

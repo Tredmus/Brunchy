@@ -42,9 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/react-use-draggable-scroll": "^0.4.7",
-    "node-sass": "^6.0.1"
   }
 }

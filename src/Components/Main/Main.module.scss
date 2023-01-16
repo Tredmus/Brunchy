@@ -5,13 +5,33 @@
     h1 {
         max-width: 22rem;
         margin-bottom: 2.313rem;
+        @include breakpoint-down(tablet) {
+            max-width: 34rem;
+        }
+        @include breakpoint-down(mobile) {
+            margin-bottom: .5rem;
+        }
     }
 
     p {
         max-width: 32.5rem;
+        @include breakpoint-down(tablet) {
+            max-width: 34rem;
+        }
     }
 
     .headingBox {
         margin-bottom: 4.313rem;
+
+        @include breakpoint-down(tablet) {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 -1.5rem 9rem;
+            text-align: center;
+        }
+        @include breakpoint-down(mobile) {
+            margin-bottom: 3.5rem;
+        }
     }
 }

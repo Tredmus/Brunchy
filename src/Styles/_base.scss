@@ -20,6 +20,14 @@ body {
   height: 100vh;
   margin: 0 auto;
   padding: 3rem 7rem;
+  overflow-x: hidden;
+
+  @include breakpoint-down(tablet) {
+    padding: 3rem 3.5rem;
+  } 
+  @include breakpoint-down(mobile) {
+    padding: 3rem 2.75rem;
+  }
 }
 
 a {
@@ -55,6 +63,9 @@ h6 {
 h1 {
   font-size: 4rem;
   line-height: 4.063rem;
+  @include breakpoint-down(mobile) {
+    font-size: 3rem;
+  }
 }
 
 .h2,

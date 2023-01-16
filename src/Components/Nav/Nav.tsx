@@ -3,15 +3,17 @@ import classes from "./Nav.module.scss";
 export const Nav = () => {
   return (
     <ul className={classes.nav}>
-      <li>
-        <a href="https://www.dreamshot.bg" target="#">
-          About us
-        </a>
-      </li>
-      <li>
-        <a href="https://www.dreamshot.bg" target="#">
-          Call us
-        </a>
+      <li className={classes.group}>
+        <li>
+          <a href="https://www.dreamshot.bg" target="#">
+            About us
+          </a>
+        </li>
+        <li>
+          <a href="https://www.dreamshot.bg" target="#">
+            Call us
+          </a>
+        </li>
       </li>
       <li className={classes.delivery}>
         Free Delivery

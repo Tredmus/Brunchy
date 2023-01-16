@@ -5,4 +5,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2.813rem;
+    @include breakpoint-down(mobile) {
+        align-items: flex-start;
+        margin-bottom: 1rem;
+        h2 {
+            transform: translateY(-40%);
+        }
+    }
 }

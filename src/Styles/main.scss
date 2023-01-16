@@ -5,8 +5,8 @@
 @import './base';
 @import './helpers';
 
-html {
-  @include breakpoint-down(mobile) {
-    font-size: 80%;
-  }
-}
+// html {
+//   @include breakpoint-down(mobile) {
+//     font-size: 80%;
+//   }
+// }

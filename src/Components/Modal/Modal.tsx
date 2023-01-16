@@ -10,12 +10,14 @@ export const Modal = ({ onClose }: Props) => {
     <>
       <Backdrop onClose={onClose} />
 
-      <div className={classes.modal}>
-        <h2>Congartulations!</h2>
-        <p>Your order is on its way.</p>
-        <h4 className="btn" onClick={onClose}>
-          Ok
-        </h4>
+      <div className={classes.modalWrapper}>
+        <div className={classes.modal}>
+          <h2>Congartulations!</h2>
+          <p>Your order is on its way.</p>
+          <h4 className="btn btn--small" onClick={onClose}>
+            Ok
+          </h4>
+        </div>
       </div>
     </>
   );

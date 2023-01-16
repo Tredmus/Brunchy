@@ -6,12 +6,18 @@
     align-items: center;
     justify-self: end;
     position: relative;
-    margin: auto auto .75rem;
+    margin: auto auto 0;
     padding: 0.875rem 2.563rem 0.875rem 1.75rem;
+    @include breakpoint-down(mobile) {
+        padding: 0.875rem 1rem 0.875rem 1rem;
+    }
 
     img {
         margin-right: 4.5rem;
         cursor: pointer;
+        @include breakpoint-down(mobile) {
+            margin-right: 2rem;
+        }
     }
     z-index: 3;
 }
@@ -62,4 +68,8 @@
     span {
         font-size: 1rem;
     }
+}
+
+.item + .item {
+    margin-top: 2.2rem;
 }

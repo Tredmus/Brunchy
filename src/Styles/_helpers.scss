@@ -3,13 +3,16 @@
     text-align: center;
     position: relative;
     min-width: 9.625rem;
-    padding: .75rem 1.5rem;
+    padding: .75rem .5rem;
     font-size: 1.25rem;
     border-radius: 0.938rem;
     background-color: $c-main;
     color: $c-white;
     cursor: pointer;
     transition: background-color $t-duration;
+    @include breakpoint-down(mobile) {
+      min-width: 9.063rem;
+    }
     
   
     &:hover {
@@ -20,4 +23,12 @@
     &:active {
       transform: scale(0.9);
     }
+  }
+
+  .btn--small {
+    @include breakpoint-down(mobile) {
+      padding: .1rem .5rem;
+      min-width: 5.25rem;
+    }
+    
   }

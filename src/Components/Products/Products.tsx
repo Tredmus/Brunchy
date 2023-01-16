@@ -16,19 +16,12 @@ export const Products = ({ onAddToCart }: Props) => {
   const scrollRef = useHorizontalScroll(ref);
 
   return (
-    <ul className={classes.products} {...events} ref={scrollRef}>
-      {products.map((product: any) => {
-        return (
-          // <Product
-          //   name={product.name}
-          //   caption={product.caption}
-          //   image={product.image}
-          //   price={product.price}
-          //   onAddToCart={onAddToCart}
-          // />
-          <Product product={product} onAddToCart={onAddToCart} />
-        );
-      })}
-    </ul>
+    <div className={classes.productsWrapper}>
+      <ul className={classes.products} {...events} ref={scrollRef}>
+        {products.map((product: any) => {
+          return <Product product={product} onAddToCart={onAddToCart} />;
+        })}
+      </ul>
+    </div>
   );
 };

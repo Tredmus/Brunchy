@@ -7,6 +7,16 @@
     font-size: .875rem;
     font-weight: 600;
     color: $c-grey;
+    @include breakpoint-down(mobile) {
+        flex-direction: column;
+    }
+    @include breakpoint-down(mobile-medium) {
+        margin-right: -1.5rem;
+    }
+
+    .group {
+        gap: 2.25rem;
+    }
     
     a, li {
         display: flex;

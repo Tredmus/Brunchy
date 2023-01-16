@@ -11,23 +11,35 @@
   z-index: 19;
 }
 
-.modal {
-  @include flexCenter;
-  flex-direction: column;
+.modalWrapper {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 20;
+  padding: 1.688rem;
+  max-width: 100%;
+}
+
+.modal {
+  @include flexCenter;
+  flex-direction: column;
   padding: 5.375rem 8.125rem;
   border-radius: 0.938rem;
   background-color: $c-white-dark;
-  z-index: 20;
+  @include breakpoint-down(mobile) {
+    padding: 3.5rem 2.875rem;
+  }
 
   h2 {
     font-size: 2.25rem;
     margin-bottom: .75rem;
     color: $c-main;
     text-transform: none;
+    @include breakpoint-down(mobile) {
+      font-size: 2rem;
+      margin-bottom: -.75rem;
+    }
   }
 
   p {
@@ -35,5 +47,8 @@
     color: $c-grey;
     margin-bottom: 2.5rem;
     font-weight: 600;
+    @include breakpoint-down(mobile) {
+      margin-bottom: 1.5rem;
+    }
   }
 }

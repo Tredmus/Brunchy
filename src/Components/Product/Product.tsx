@@ -10,7 +10,7 @@ export type ProductType = {
 
 type Props = {
   product: ProductType;
-  onAddToCart: any;
+  onAddToCart: (product: ProductType) => void;
 };
 
 export const Product = ({ product, onAddToCart }: Props) => {

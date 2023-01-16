@@ -3,7 +3,7 @@ import classes from "./Nav.module.scss";
 export const Nav = () => {
   return (
     <ul className={classes.nav}>
-      <li className={classes.group}>
+      <div className={classes.group}>
         <li>
           <a href="https://www.dreamshot.bg" target="#">
             About us
@@ -14,7 +14,7 @@ export const Nav = () => {
             Call us
           </a>
         </li>
-      </li>
+      </div>
       <li className={classes.delivery}>
         Free Delivery
         <div className={classes.deliveryCircle}>

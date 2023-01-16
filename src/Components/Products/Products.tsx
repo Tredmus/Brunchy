@@ -19,7 +19,13 @@ export const Products = ({ onAddToCart }: Props) => {
     <div className={classes.productsWrapper}>
       <ul className={classes.products} {...events} ref={scrollRef}>
         {products.map((product: any) => {
-          return <Product product={product} onAddToCart={onAddToCart} />;
+          return (
+            <Product
+              key={product.name}
+              product={product}
+              onAddToCart={onAddToCart}
+            />
+          );
         })}
       </ul>
     </div>
